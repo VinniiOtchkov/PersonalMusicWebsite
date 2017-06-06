@@ -1,0 +1,307 @@
+.container-fluid {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px auto;
+  padding: 0px;
+  background-color: black;
+  background-image: url(vinyl.png);
+
+}
+
+#musicContainer {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px auto;
+  padding: 0px;
+  background-color: black;
+  background-image: url(vinylMirrored.png);
+;}
+
+
+.mapContainer {
+  height: 200px;
+  width: 500px;
+  padding-left: 400px;
+}
+
+#map {
+  height: 100%;
+}
+
+body {
+  margin: 0px auto;
+  padding: 0px;
+  text-decoration: none;
+}
+
+
+#copyright {
+  padding-left: 20px;
+  color: white;
+}
+
+
+/*-------------------------------Bio Page---------------------------------*/
+
+
+/*-------------------------------Music Page---------------------------------*/
+
+
+#sc-widget {
+  height: 500px;
+  width: 800px;
+position: absolute;
+padding-top: 80px;
+padding-left: 100px;
+}
+
+#widget{
+  background-color: #0C0C0C !important;
+
+}
+
+.g-background-default {
+
+    background-color: #0C0C0C !important;
+
+}
+
+
+
+/*-------------------------------Contact Page--------------------------------*/
+
+#menu {
+  text-indent: 50px;
+  float: left;
+  margin-top: 3.9%;
+  height: 85.8%;
+  width: 10%;
+  opacity: 0;
+  text-decoration: none;
+  font-family: 'Monoton', cursive;
+  font-size: 30px;
+
+opacity:0;
+-webkit-transition : all 0.5s ease-out;
+-moz-transition : all 0.5s ease-out;
+-o-transition : all 0.5s ease-out;
+transition : all 0.5s ease-out;
+
+}
+
+#menu:hover {
+padding-left: 30px;
+ display: block;
+  font-family: 'Monoton', cursive;
+  color: white;
+  text-decoration: none;
+  opacity:1;
+
+-webkit-transition : all 0.5s ease-out;
+-moz-transition : all 0.5s ease-out;
+-o-transition : all 0.5s ease-out;
+transition : all 0.5s ease-out;
+
+}
+
+
+
+#signup{
+font-family: 'Monoton', cursive;
+font-size: 40px;
+height: 200px;
+color: white;
+width: 300px;
+padding-top:160px;
+padding-left: 500px;
+text-align: center;
+}
+
+
+::-webkit-input-placeholder {
+    color:white;
+}
+
+#mce-EMAIL{
+width: 200px;
+border-radius: 8px;
+outline: none;
+background-color: #0D0D0D;
+color:white;
+
+}
+
+.button{
+  border-radius: 8px;
+  background-color: #0D0D0D;
+  width: 50px;
+  font-family: 'Monoton', cursive;
+outline: none;
+
+}
+
+
+.musicSymbol{
+  color:black;
+  -webkit-transition : all 0.5s ease-in;
+  -moz-transition : all 0.5s ease-in;
+  -o-transition : all 0.5s ease-in;
+  transition : all 0.5s ease-in;
+}
+
+.musicSymbol:hover{
+  color:black;
+  -webkit-transition : all 0.5s ease-in;
+  -moz-transition : all 0.5s ease-in;
+  -o-transition : all 0.5s ease-in;
+  transition : all 0.5s ease-in;
+}
+
+#bio{
+  text-decoration: none;
+  color: white;
+}
+
+#bio:hover{
+  text-decoration: none;
+  color: white;
+  opacity: 0.75;
+
+}
+
+#musicPage{
+  text-decoration: none;
+  color: white;
+}
+
+#musicPage:hover{
+  text-decoration: none;
+  color: white;
+  opacity: 0.75;
+}
+
+#contactPage{
+  text-decoration: none;
+  color: white;
+}
+
+#contactPage:hover{
+  text-decoration: none;
+  color: white;
+  opacity: 0.75;
+
+}
+
+
+#topBar {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  background-color: #0E0E0E;
+  font-family: 'Monoton', cursive;
+  font-size: 40px;
+  text-shadow: 4px 4px black;
+  color: white;
+}
+
+#bottomBar {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  background-color: #0E0E0E;
+  bottom: 0;
+  font-family: 'Monoton', cursive;
+  text-shadow: 4px 4px black;
+  color: white;
+}
+
+#iframe {
+  position: absolute;
+  bottom: 30%;
+  left: 370px;
+  height: 350px;
+  width: 500px;
+}
+
+#icons {
+  position: absolute;
+  bottom: 10%;
+  left: 450px;
+  word-spacing: 55px;
+  text-align: center;
+
+}
+
+.twitter-follow-button img {
+  height: 64px;
+  width: 64px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+}
+
+.twitter-follow-button img:hover {
+  filter: invert(100%);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+#soundcloudBadge {
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+
+}
+
+#soundcloudBadge:hover {
+  filter: invert(100%);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+.instagramBadge img {
+  height: 45px;
+  width: 45px;
+  padding-bottom: 8px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+}
+
+.instagramBadge img:hover {
+  filter: invert(100%);
+  height: 45px;
+  width: 45px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+.gmailBadge img {
+  height: 45px;
+  width: 45px;
+  padding-bottom: 8px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+}
+
+.gmailBadge img:hover {
+  filter: invert(100%);
+  height: 45px;
+  width: 45px;
+  padding-bottom: 8px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
