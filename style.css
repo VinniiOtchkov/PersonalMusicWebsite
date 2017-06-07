@@ -1,3 +1,9 @@
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1};
+}
+
+
 .container-fluid {
   height: 100vh;
   width: 100vw;
@@ -8,14 +14,14 @@
 
 }
 
-#musicContainer {
+
+/*#musicContainer {
   height: 100vh;
   width: 100vw;
   margin: 0px auto;
   padding: 0px;
   background-color: black;
-  background-image: url(vinylMirrored.png);
-;}
+;}*/
 
 
 .mapContainer {
@@ -32,6 +38,10 @@ body {
   margin: 0px auto;
   padding: 0px;
   text-decoration: none;
+    -webkit-animation: fadein 1.5s;
+    background:black;
+
+
 }
 
 
@@ -48,10 +58,10 @@ body {
 
 
 #sc-widget {
-  height: 500px;
+  height: 550px;
   width: 800px;
 position: absolute;
-padding-top: 80px;
+padding-top: 60px;
 padding-left: 100px;
 }
 
@@ -65,7 +75,6 @@ padding-left: 100px;
     background-color: #0C0C0C !important;
 
 }
-
 
 
 /*-------------------------------Contact Page--------------------------------*/
@@ -126,7 +135,7 @@ text-align: center;
 width: 200px;
 border-radius: 8px;
 outline: none;
-background-color: #0D0D0D;
+background-color: transparent;
 color:white;
 
 }
@@ -238,6 +247,10 @@ outline: none;
   transition-duration: 0.3s;
   transition-timing-function: ease;
   transition-delay: initial;
+
+  animation: fadein 2s;
+
+
 }
 
 .twitter-follow-button img:hover {
@@ -249,14 +262,19 @@ outline: none;
   transform: translateY(-8px);
 }
 
-#soundcloudBadge {
+.soundcloud-follow-button img {
   transition-duration: 0.3s;
   transition-timing-function: ease;
   transition-delay: initial;
 
+  animation: fadein 2s;
+  height: 60px;
+  width: 60px;
+  padding-left: 10px;
+
 }
 
-#soundcloudBadge:hover {
+.soundcloud-follow-button img:hover {
   filter: invert(100%);
   transition-duration: 0.3s;
   transition-timing-function: ease;
@@ -272,6 +290,8 @@ outline: none;
   transition-duration: 0.3s;
   transition-timing-function: ease;
   transition-delay: initial;
+  animation: fadein 2s;
+
 }
 
 .instagramBadge img:hover {
@@ -289,9 +309,13 @@ outline: none;
   height: 45px;
   width: 45px;
   padding-bottom: 8px;
+
   transition-duration: 0.3s;
   transition-timing-function: ease;
   transition-delay: initial;
+
+  animation: fadein 2s;
+
 }
 
 .gmailBadge img:hover {
@@ -299,6 +323,7 @@ outline: none;
   height: 45px;
   width: 45px;
   padding-bottom: 8px;
+
   transition-duration: 0.3s;
   transition-timing-function: ease;
   transition-delay: initial;
