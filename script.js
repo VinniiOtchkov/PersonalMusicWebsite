@@ -6,6 +6,32 @@ $(document).ready(function() {
   $('#signup').show();
 
 
+  $(".button").click(function(e) {
+      e.preventDefault();
+
+//  $.get("https://us16.api.mailchimp.com/3.0/lists/4474f89949/members
+// ",function(data){
+//
+//     console.log(data);
+//
+// });
+
+var stuff = $.ajax({
+
+    type:"GET",
+    url:"http://api.icndb.com/jokes/random",
+    success: function(data){
+
+      var norris=data.value.joke;
+
+      console.log(norris.replace(/Chuck Norris/g,'Vinnii').replace('Chuck','Vinnii').replace(/&quot;/g,'"'));
+
+      $('#norrisText').append('<p>'+data.value.joke+'</p>');
+
+    }
+  })
+});
+
   // $("body").css("display", "none");
   // $("body").fadeIn(600);
 
@@ -40,15 +66,17 @@ $(document).ready(function() {
             widget.setVolume(95);
 
             // Gets current volume of player
-            widget.getVolume(function(volume) {
+            var volumey =widget.getVolume(function(volume) {
               console.log('Current Volume: ' + volume);
 
-              widget.getDuration(function(duration){
+              var durationy = widget.getDuration(function(duration){
                 console.log('Current Duration: ' +duration);
               })
 
             });
-
+              $('button.playButton.medium').click(function(){
+                return
+              })
           });
 
         }());
