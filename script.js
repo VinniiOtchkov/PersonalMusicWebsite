@@ -16,20 +16,24 @@ $(document).ready(function() {
 //
 // });
 
-var stuff = $.ajax({
+$.ajax({
 
     type:"GET",
     url:"http://api.icndb.com/jokes/random",
     success: function(data){
 
+
       var norris=data.value.joke;
+      var norris = norris.replace(/Chuck Norris/g,'Vinnii').replace('Chuck','Vinnii').replace(/&quot;/g,'"')
 
       console.log(norris.replace(/Chuck Norris/g,'Vinnii').replace('Chuck','Vinnii').replace(/&quot;/g,'"'));
 
-      $('#norrisText').append('<p>'+data.value.joke+'</p>');
-
+      $('#norrisText').append(`<p id = "norrisStuff">${norris}</p>`);
     }
+
   })
+
+  
 });
 
   // $("body").css("display", "none");
