@@ -76,11 +76,14 @@ padding-left: 100px;
 
 }
 
-#norrisText{
-  font-size: 200px;
+#norrisStuff{
+  font-size: 20px;
   color: white;
-  padding-top: 200px;
+  padding-top: 180px;
   margin: 0px auto;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  -webkit-animation: fadein 1.5s;
 }
 
 /*-------------------------------Contact Page--------------------------------*/

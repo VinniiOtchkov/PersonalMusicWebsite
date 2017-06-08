@@ -6,15 +6,9 @@ $(document).ready(function() {
   $('#signup').show();
 
 
-  $(".button").click(function(e) {
+  $(".button2").click(function(e) {
       e.preventDefault();
 
-//  $.get("https://us16.api.mailchimp.com/3.0/lists/4474f89949/members
-// ",function(data){
-//
-//     console.log(data);
-//
-// });
 
 $.ajax({
 
@@ -31,9 +25,17 @@ $.ajax({
       $('#norrisText').append(`<p id = "norrisStuff">${norris}</p>`);
     }
 
+
+    //  $.get("https://us16.api.mailchimp.com/3.0/lists/4474f89949/members
+    // ",function(data){
+    //
+    //     console.log(data);
+    //
+    // });
+
   })
 
-  
+
 });
 
   // $("body").css("display", "none");
