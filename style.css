@@ -52,7 +52,17 @@ body {
 
 
 /*-------------------------------Bio Page---------------------------------*/
+#bioTexty{
+  margin: 0px auto;
+  padding: 0px;
+  width: 800px;
+  color: white;
+  font-family: 'Monoton', cursive;
+  font-size: 25px;
+  padding-top: 80px;
+  -webkit-animation: fadein 1.5s;
 
+}
 
 /*-------------------------------Music Page---------------------------------*/
 
@@ -65,6 +75,7 @@ padding-top: 60px;
 padding-left: 100px;
 }
 
+
 #widget{
   background-color: #0C0C0C !important;
 
@@ -76,14 +87,22 @@ padding-left: 100px;
 
 }
 
+#norrisText{
+  margin: 0px auto;
+  padding: 0px;
+}
+
 #norrisStuff{
   font-size: 20px;
   color: white;
-  padding-top: 180px;
-  margin: 0px auto;
+  height: 0px;
   font-family: 'Monoton', cursive;
   text-align: center;
   -webkit-animation: fadein 1.5s;
+  background-color: white;
+  padding-right: 40px;
+
+
 }
 
 /*-------------------------------Contact Page--------------------------------*/
@@ -155,6 +174,21 @@ color:white;
   width: 50px;
   font-family: 'Monoton', cursive;
 outline: none;
+
+}
+
+.button2{
+  border-radius: 8px;
+  background-color: transparent;
+  width: 200px;
+  color: white;
+  font-family: 'Monoton', cursive;
+outline: none;
+margin-top: 80px;
+margin-left: 380px;
+-webkit-animation: fadein 1.5s;
+position: static;
+
 
 }
 

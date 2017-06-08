@@ -9,6 +9,8 @@ $(document).ready(function() {
   $(".button2").click(function(e) {
       e.preventDefault();
 
+$('#norrisStuff').remove();
+
 
 $.ajax({
 
