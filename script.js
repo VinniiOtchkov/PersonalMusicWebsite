@@ -6,30 +6,34 @@ $(document).ready(function() {
   $('#signup').show();
 
 
-  $(".button").click(function(e) {
+  $(".button2").click(function(e) {
       e.preventDefault();
 
-//  $.get("https://us16.api.mailchimp.com/3.0/lists/4474f89949/members
-// ",function(data){
-//
-//     console.log(data);
-//
-// });
+      $('#norrisStuff').remove();
 
-var stuff = $.ajax({
+$.ajax({
 
     type:"GET",
     url:"http://api.icndb.com/jokes/random",
     success: function(data){
 
+
       var norris=data.value.joke;
+      var norris = norris.replace(/Chuck Norris/g,'Vinnii').replace('Chuck','Vinnii').replace(/&quot;/g,'"')
 
       console.log(norris.replace(/Chuck Norris/g,'Vinnii').replace('Chuck','Vinnii').replace(/&quot;/g,'"'));
 
-      $('#norrisText').append('<p>'+data.value.joke+'</p>');
-
+      $('#norrisText').append(`<p id = "norrisStuff">${norris}</p>`);
     }
+
   })
+  //  $.get("https://us16.api.mailchimp.com/3.0/lists/4474f89949/members
+  // ",function(data){
+  //
+  //     console.log(data);
+  //
+  // });
+
 });
 
   // $("body").css("display", "none");

@@ -57,6 +57,12 @@ body {
 /*-------------------------------Music Page---------------------------------*/
 
 
+#player{
+background-color: black;
+
+}
+
+
 #sc-widget {
   height: 550px;
   width: 800px;
@@ -76,11 +82,14 @@ padding-left: 100px;
 
 }
 
-#norrisText{
-  font-size: 200px;
+#norrisStuff{
+  font-size: 20px;
   color: white;
-  padding-top: 200px;
+  padding-top: 180px;
   margin: 0px auto;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  -webkit-animation: fadein 1.5s;
 }
 
 /*-------------------------------Contact Page--------------------------------*/
@@ -155,6 +164,17 @@ outline: none;
 
 }
 
+.button2{
+  border-radius: 8px;
+  background-color: #0D0D0D;
+  width: 200px;
+
+  font-family: 'Monoton', cursive;
+outline: none;
+margin-top: 500px;
+margin-left: 200px;
+
+}
 
 .musicSymbol{
   color:black;
