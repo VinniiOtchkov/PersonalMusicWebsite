@@ -14,11 +14,37 @@
 
   <link rel="stylesheet" href="hover.css">
 
+  <link rel="stylesheet" href="turntable.css">
+
+  <script src="soundmanager2.js"></script>
+
+  <script type="text/javascript" src="soundmanagerv297a-20170601/demo/turntable/script/turntable.js" defer></script>
+
+
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
 <script src ="https://w.soundcloud.com/player/api.js"></script>
 
 <link rel="stylesheet" href="style.css">
+
+
+<script src="soundmanagerv297a-20170601/script/soundmanager2.js"></script>
+
+<script>
+soundManager.setup({
+  url: 'soundmanagerv297a-20170601/swf/',
+  onready: function() {
+    var mySound = soundManager.createSound({
+      id: 'aSound',
+      url: '/path/to/an.mp3'
+    });
+    mySound.play();
+  },
+  ontimeout: function() {
+    // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
+  }
+});
+</script>
 
 
   <meta charset="utf-8">
