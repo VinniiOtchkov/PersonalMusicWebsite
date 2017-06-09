@@ -82,16 +82,36 @@ padding-left: 100px;
 
 }
 
-#norrisStuff{
-  font-size: 20px;
-  color: white;
-  padding-top: 180px;
-  margin: 0px auto;
+
+#songList{
+  list-style: none;
+  overflow: scroll;
+  text-decoration: none;
   font-family: 'Monoton', cursive;
   text-align: center;
-  -webkit-animation: fadein 1.5s;
+padding-right: 200px;
 }
 
+li{
+margin: 0px auto;
+padding: 0px;
+
+}
+
+.trigger{
+  text-decoration: none;
+  color: white;
+  padding-bottom: 500px;
+height: 0px;
+width: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+#songy{
+padding-bottom: 500px;
+
+}
 /*-------------------------------Contact Page--------------------------------*/
 
 #menu {

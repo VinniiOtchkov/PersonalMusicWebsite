@@ -6,6 +6,16 @@
  * http://schillmania.com/projects/soundmanager2/license.txt
  */
 
+.turntableContainer{
+  height: 500px;
+  width: 500px;
+  padding-top: 100px;
+  padding-left: 50px;
+  margin: 0px auto;
+
+}
+
+
 .turntable {
  position: relative;
 }

@@ -2,6 +2,11 @@
 
 (function(window) {
 
+  $("window").on("click", ".trigger", function(e) {
+    e.preventDefault();
+  });
+
+
   /** @license
    * SoundManager 2: "Turntable UI": Base and API
    * Copyright (c) 2015, Scott Schiller. All rights reserved.
@@ -12,31 +17,60 @@
 
   'use strict';
 
+
+  $.ajax({
+
+    type: "GET",
+    url: "https://salty-eyrie-86402.herokuapp.com/get_songs.json",
+
+    success: function(data) {
+
+      var songs = data.beats;
+
+      songs.forEach(function(song) {
+        console.log(song);
+
+        $('ul').append(`
+          <li>
+            <a class = "trigger" href="${song.url}" data-turntable="turntable-large"><b>${song.songTitle}</b> -${song.artist}</a></li>
+
+          `)
+
+      })
+
+
+    }
+
+  })
+
+
+
   var turntables = [],
-      turntablesById = {},
-      // CSS selector for top-level DOM node
-      turntableSelector = '.turntable',
-      tt_prefix = 'tt_',
-      idCounter = 0,
-      utils;
+    turntablesById = {},
+    // CSS selector for top-level DOM node
+    turntableSelector = '.turntable',
+    tt_prefix = 'tt_',
+    idCounter = 0,
+    utils;
 
   /**
    * Slightly hackish: Turntable event callbacks.
    * Override globally by setting turntables.on = {}, or individually by turntables[0].on = {} etc.
    */
-  turntables.on = {/*
-    stop: function(tt) {
-      console.log('turntable stopped', tt);
-    },
-    start: function(tt) {
-      console.log('turntable started', tt);
-    },
-    powerOn: function(tt) {
-      console.log('turntable powerOn', tt);
-    },
-    powerOff: function(tt) {
-      console.log('turntable powerOff', tt);
-    }*/
+  turntables.on = {
+    /*
+        stop: function(tt) {
+          console.log('turntable stopped', tt);
+        },
+        start: function(tt) {
+          console.log('turntable started', tt);
+        },
+        powerOn: function(tt) {
+          console.log('turntable powerOn', tt);
+        },
+        powerOff: function(tt) {
+          console.log('turntable powerOff', tt);
+        }*/
   };
 
   function Turntable(o, options) {
@@ -213,10 +247,10 @@
             data.record.hasArtwork = true;
           }
         } else if (data.record.hasArtwork) {
-            dom.record.style.backgroundImage = 'none';
-            remove(css.turntable.hasArtwork);
-            data.record.hasArtwork = false;
-          }
+          dom.record.style.backgroundImage = 'none';
+          remove(css.turntable.hasArtwork);
+          data.record.hasArtwork = false;
+        }
         if (options.hideLabelWithArtwork) {
           add(css.turntable.hideLabelWithArtwork);
         } else {
@@ -246,12 +280,12 @@
 
     function preventDefault(e) {
 
-        if (e.target && e.target.nodeName === 'A') {
-          utils.events.preventDefault(e);
-          return false;
-        }
+      if (e.target && e.target.nodeName === 'A') {
+        utils.events.preventDefault(e);
+        return false;
+      }
 
-        return true;
+      return true;
 
     }
 
@@ -397,7 +431,7 @@
       function toggleClass(o, cStr) {
 
         var found,
-            method;
+          method;
 
         found = hasClass(o, cStr);
 
@@ -425,8 +459,8 @@
       function getAll(param1, param2) {
 
         var node,
-            selector,
-            results;
+          selector,
+          results;
 
         if (arguments.length === 1) {
 
@@ -454,7 +488,7 @@
 
       }
 
-      function get(/* parentNode, selector */) {
+      function get( /* parentNode, selector */ ) {
 
         var results = getAll.apply(this, arguments);
 
@@ -494,7 +528,7 @@
 
         } else if (o.x) {
 
-            curleft += o.x;
+          curleft += o.x;
 
         }
 
@@ -519,7 +553,7 @@
 
         } else if (o.y) {
 
-            curtop += o.y;
+          curtop += o.y;
 
         }
 
@@ -607,14 +641,14 @@
     features: (function() {
 
       var getAnimationFrame,
-          localAnimationFrame,
-          localFeatures,
-          prop,
-          styles,
-          testDiv,
-          transform;
+        localAnimationFrame,
+        localFeatures,
+        prop,
+        styles,
+        testDiv,
+        transform;
 
-        testDiv = document.createElement('div');
+      testDiv = document.createElement('div');
 
       /**
        * hat tip: paul irish
@@ -622,12 +656,12 @@
        * https://gist.github.com/838785
        */
 
-      localAnimationFrame = (window.requestAnimationFrame
-        || window.webkitRequestAnimationFrame
-        || window.mozRequestAnimationFrame
-        || window.oRequestAnimationFrame
-        || window.msRequestAnimationFrame
-        || null);
+      localAnimationFrame = (window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        null);
 
       // apply to window, avoid "illegal invocation" errors in Chrome
       getAnimationFrame = localAnimationFrame ? function() {
@@ -675,7 +709,7 @@
 
         try {
           testDiv.style[transform] = style;
-        } catch(e) {
+        } catch (e) {
           // that *definitely* didn't work.
           return false;
         }

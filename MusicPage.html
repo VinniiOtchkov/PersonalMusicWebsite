@@ -2,6 +2,16 @@
 <html>
 
 <head>
+  <script src="soundmanagerv297a-20170601/demo/turntable/script/turntable.js" defer></script>
+
+  <script src="soundmanagerv297a-20170601/demo/turntable/script/turntable-app.js" defer></script>
+
+  <meta name="robots" content="noindex" />
+  <script type="text/javascript" src="soundmanagerv297a-20170601/script/soundmanager2.js"></script>
+
+
+  <link rel="stylesheet" href="soundmanagerv297a-20170601/demo/turntable/css/turntable.css" />
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
@@ -30,7 +40,8 @@
 
 <script src="soundmanagerv297a-20170601/script/soundmanager2.js"></script>
 
-<script>
+
+<!-- <script>
 soundManager.setup({
   url: 'soundmanagerv297a-20170601/swf/',
   onready: function() {
@@ -44,7 +55,7 @@ soundManager.setup({
     // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
   }
 });
-</script>
+</script> -->
 
 
   <meta charset="utf-8">
@@ -74,6 +85,61 @@ soundManager.setup({
       <a id="contactPage" href="ContactPage.html">Contact</a>
     </div>
 
+    <!-- <div style="position:relative;text-align:center"> -->
+
+      <!-- note: inline-block is just for centering -->
+
+      <div class="turntableContainer">
+
+
+        <div id="turntable-large" class="turntable has-slipmat" style="display:inline-block">
+
+          <div class="frame"></div>
+
+          <div class="table-bg"></div>
+
+          <!-- image that sets the base dimensions-->
+          <img src="soundmanagerv297a-20170601/demo/turntable/image/tt_case_and_lighting.png" alt="" class="stub" />
+
+          <div class="bd">
+
+            <div class="platter"></div>
+
+            <div class="slipmat-holder">
+              <div class="slipmat"></div>
+            </div>
+
+            <div class="record-holder">
+              <div class="record"></div>
+              <div class="record-grooves"></div>
+              <div class="label"></div>
+            </div>
+
+            <div class="spindle"></div>
+            <div class="power-light"></div>
+            <a href="#" class="power-dial" data-method="powerToggle"></a>
+            <a href="#" class="button start-stop" data-method="toggle"></a>
+            <a href="#" class="button speed-33 on"></a>
+            <a href="#" class="button speed-45"></a>
+            <div class="light light-on"></div>
+            <a href="#" class="button light"></a>
+            <div class="tonearm-holder">
+              <div class="tonearm"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div id ="songy">
+        <ul id="songList">
+
+
+
+        </ul>
+      </div>
 
 
 

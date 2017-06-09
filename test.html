@@ -1,72 +1,89 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Snazzy Maps Super Simple Example</title>
 
-        <style type="text/css">
-            /* Set a size for our map container, the Google Map will take up 100% of this container */
-            #map {
-                width: 750px;
-                height: 500px;
-            }
-        </style>
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-        <!--
-            You need to include this script tag on any page that has a Google Map.
+  <script src="soundmanagerv297a-20170601/demo/turntable/script/turntable.js" defer></script>
 
-            The following script tag will work when opening this example locally on your computer.
-            But if you use this on a localhost server or a live website you will need to include an API key.
-            Sign up for one here (it's free for small usage):
-                https://developers.google.com/maps/documentation/javascript/tutorial#api_key
-
-            After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
-                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>
-        -->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAadj1GOuqy4wc71lvVyFLEKbTMFMQM9k"></script>
+  <script src="soundmanagerv297a-20170601/demo/turntable/script/turntable-app.js" defer></script>
 
 
-        <script type="text/javascript">
-            // When the window has finished loading create our google map below
-            google.maps.event.addDomListener(window, 'load', init);
+  <meta charset="UTF-8" />
 
-            function init() {
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+  <title></title>
+
+  <meta name="robots" content="noindex" />
+  <script type="text/javascript" src="soundmanagerv297a-20170601/script/soundmanager2.js"></script>
+
+
+  <link rel="stylesheet" href="soundmanagerv297a-20170601/demo/turntable/css/turntable.css" />
+
+
+</head>
+
+<body>
 
 
 
-                var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 11,
+  <!-- start turntable: centered and scales up to a predetermined max-width (based on image size) -->
 
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+  <div style="position:relative;text-align:center">
 
-                    // How you would like to style the map.
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
-                };
+    <!-- note: inline-block is just for centering -->
 
-                // Get the HTML DOM element that will contain your map
-                // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map');
+    <div class="turntableContainer">
 
-                // Create the Google Map using our element and options defined above
-                var map = new google.maps.Map(mapElement, mapOptions);
 
-                // Let's also add a marker while we're at it
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(40.6700, -73.9400),
-                    map: map,
-                });
-            }
-        </script>
-    </head>
-    <body>
-        <h1>Snazzy Maps Super Simple Example</h1>
-        <h2><a href="https://snazzymaps.com/style/38/shades-of-grey" target="_blank">Shades of Grey</a></h2>
+          <div class = "songy">
 
-        <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
-        <div id="map"></div>
-    </body>
-</html>
+            <ul id="songList">
+
+
+
+            </ul>
+          </div>
+
+      <div id="turntable-large" class="turntable has-slipmat" style="display:inline-block">
+
+        <div class="frame"></div>
+
+        <div class="table-bg"></div>
+
+        <!-- image that sets the base dimensions-->
+        <img src="soundmanagerv297a-20170601/demo/turntable/image/tt_case_and_lighting.png" alt="" class="stub" />
+
+        <div class="bd">
+
+          <div class="platter"></div>
+
+          <div class="slipmat-holder">
+            <div class="slipmat"></div>
+          </div>
+
+          <div class="record-holder">
+            <div class="record"></div>
+            <div class="record-grooves"></div>
+            <div class="label"></div>
+          </div>
+
+          <div class="spindle"></div>
+          <div class="power-light"></div>
+          <a href="#" class="power-dial" data-method="powerToggle"></a>
+          <a href="#" class="button start-stop" data-method="toggle"></a>
+          <a href="#" class="button speed-33 on"></a>
+          <a href="#" class="button speed-45"></a>
+          <div class="light light-on"></div>
+          <a href="#" class="button light"></a>
+          <div class="tonearm-holder">
+            <div class="tonearm"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+</body>
+
+<!-- end turntable -->
