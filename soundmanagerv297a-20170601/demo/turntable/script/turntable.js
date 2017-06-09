@@ -7,14 +7,6 @@
   });
 
 
-  /** @license
-   * SoundManager 2: "Turntable UI": Base and API
-   * Copyright (c) 2015, Scott Schiller. All rights reserved.
-   * http://www.schillmania.com/projects/soundmanager2/
-   * Code provided under BSD license.
-   * http://schillmania.com/projects/soundmanager2/license.txt
-   */
-
   'use strict';
 
 
@@ -32,7 +24,7 @@
 
         $('ul').append(`
           <li>
-            <a class = "trigger" href="${song.url}" data-turntable="turntable-large"><b>${song.songTitle}</b> -${song.artist}</a></li>
+            <a class = "trigger" href="${song.url}" data-turntable="turntable-large">${song.songTitle} -${song.artist}</a></li>
 
           `)
 
