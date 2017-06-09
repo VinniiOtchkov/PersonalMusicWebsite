@@ -58,8 +58,8 @@ body {
 }
 
 #welcomeText{
-  padding-top: 250px;
-  padding-left: 510px;
+  margin-top: 280px;
+  margin-left: 500px;
   text-decoration: none;
 
 
@@ -73,6 +73,8 @@ font-family: 'Comfortaa', cursive;
   font-size: 20px;
   padding-top: 100px;
   line-height: 300%;
+  margin-left: 200px;
+  width: 1000px;
 }
 
 /*-------------------------------Music Page---------------------------------*/
