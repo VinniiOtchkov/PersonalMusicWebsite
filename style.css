@@ -65,7 +65,17 @@ body {
 
 }
 /*-------------------------------Bio Page---------------------------------*/
+#bioTexty{
+  margin: 0px auto;
+  padding: 0px;
+  width: 800px;
+  color: white;
+  font-family: 'Monoton', cursive;
+  font-size: 25px;
+  padding-top: 80px;
+  -webkit-animation: fadein 1.5s;
 
+}
 
 #bioPar{
 font-family: 'Comfortaa', cursive;
@@ -92,6 +102,7 @@ position: absolute;
 padding-top: 60px;
 padding-left: 100px;
 }
+
 
 #widget{
   background-color: #0C0C0C !important;
@@ -137,6 +148,23 @@ height: 0px;
 width: 0px;
   margin: 0px;
   text-align: center;
+
+/*#norrisText{
+  margin: 0px auto;
+  padding: 0px;
+}
+
+#norrisStuff{
+  font-size: 20px;
+  color: white;
+  height: 0px;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  -webkit-animation: fadein 1.5s;
+  background-color: white;
+  padding-right: 40px;*/
+
+
 }
 
 
@@ -223,6 +251,7 @@ margin-top: 500px;
 margin-left: 200px;
 
 }
+
 
 .musicSymbol{
   color:black;
