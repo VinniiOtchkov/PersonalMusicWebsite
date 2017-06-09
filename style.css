@@ -3,7 +3,6 @@
   to   { opacity: 1};
 }
 
-
 .container-fluid {
   height: 100vh;
   width: 100vw;
@@ -49,11 +48,34 @@ body {
 }
 
 
+#welcome{
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  font-size: 50px;
+  animation: fadein 5s;
+  text-decoration: none;
+
+}
+
+#welcomeText{
+  padding-top: 250px;
+  padding-left: 510px;
+  text-decoration: none;
+
+
+}
 /*-------------------------------Bio Page---------------------------------*/
 
 
-/*-------------------------------Music Page---------------------------------*/
+#bioPar{
+font-family: 'Comfortaa', cursive;
+  color: white;
+  font-size: 20px;
+  padding-top: 100px;
+  line-height: 300%;
+}
 
+/*-------------------------------Music Page---------------------------------*/
 
 #player{
 background-color: black;
@@ -84,7 +106,7 @@ padding-left: 100px;
 #songList{
   list-style: none;
   text-decoration: none;
-  font-family: 'Monoton', cursive;
+  font-family: 'Comfortaa', cursive;
   text-align: center;
   padding-left: 700px;
 }
@@ -97,8 +119,12 @@ width: 300px;
 float: right;
 font-size: 15px;
 font-weight: lighter;
-line-height: 300%;
+line-height: 400%;
 overflow: scroll;
+}
+
+li:hover{
+  opacity: 0.75;
 }
 
 
