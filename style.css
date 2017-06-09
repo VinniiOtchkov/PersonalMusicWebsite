@@ -3,7 +3,6 @@
   to   { opacity: 1};
 }
 
-
 .container-fluid {
   height: 100vh;
   width: 100vw;
@@ -40,8 +39,6 @@ body {
   text-decoration: none;
     -webkit-animation: fadein 1.5s;
     background:black;
-
-
 }
 
 
@@ -51,6 +48,22 @@ body {
 }
 
 
+#welcome{
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  font-size: 50px;
+  animation: fadein 5s;
+  text-decoration: none;
+
+}
+
+#welcomeText{
+  margin-top: 280px;
+  margin-left: 500px;
+  text-decoration: none;
+
+
+}
 /*-------------------------------Bio Page---------------------------------*/
 #bioTexty{
   margin: 0px auto;
@@ -64,7 +77,22 @@ body {
 
 }
 
+#bioPar{
+font-family: 'Comfortaa', cursive;
+  color: white;
+  font-size: 20px;
+  padding-top: 100px;
+  line-height: 300%;
+  margin-left: 200px;
+  width: 1000px;
+}
+
 /*-------------------------------Music Page---------------------------------*/
+
+#player{
+background-color: black;
+
+}
 
 
 #sc-widget {
@@ -87,7 +115,41 @@ padding-left: 100px;
 
 }
 
-#norrisText{
+
+#songList{
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  padding-left: 700px;
+}
+
+
+li{
+margin: 0px auto;
+padding: 0px;
+width: 300px;
+float: right;
+font-size: 15px;
+font-weight: lighter;
+line-height: 400%;
+overflow: scroll;
+}
+
+li:hover{
+  opacity: 0.75;
+}
+
+
+.trigger{
+  text-decoration: none;
+  color: white;
+height: 0px;
+width: 0px;
+  margin: 0px;
+  text-align: center;
+
+/*#norrisText{
   margin: 0px auto;
   padding: 0px;
 }
@@ -100,10 +162,11 @@ padding-left: 100px;
   text-align: center;
   -webkit-animation: fadein 1.5s;
   background-color: white;
-  padding-right: 40px;
+  padding-right: 40px;*/
 
 
 }
+
 
 /*-------------------------------Contact Page--------------------------------*/
 
@@ -149,7 +212,7 @@ font-size: 40px;
 height: 200px;
 color: white;
 width: 300px;
-padding-top:160px;
+padding-top:120px;
 padding-left: 500px;
 text-align: center;
 }
@@ -179,16 +242,13 @@ outline: none;
 
 .button2{
   border-radius: 8px;
-  background-color: transparent;
+  background-color: #0D0D0D;
   width: 200px;
-  color: white;
+
   font-family: 'Monoton', cursive;
 outline: none;
-margin-top: 80px;
-margin-left: 380px;
--webkit-animation: fadein 1.5s;
-position: static;
-
+margin-top: 500px;
+margin-left: 200px;
 
 }
 
@@ -254,6 +314,7 @@ position: static;
   font-size: 40px;
   text-shadow: 4px 4px black;
   color: white;
+  position: static;
 }
 
 #bottomBar {
@@ -334,7 +395,6 @@ position: static;
   transition-timing-function: ease;
   transition-delay: initial;
   animation: fadein 2s;
-
 }
 
 .instagramBadge img:hover {
@@ -356,7 +416,6 @@ position: static;
   transition-duration: 0.3s;
   transition-timing-function: ease;
   transition-delay: initial;
-
   animation: fadein 2s;
 
 }
